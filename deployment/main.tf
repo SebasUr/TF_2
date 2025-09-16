@@ -105,6 +105,11 @@ locals {
     export AWS_SECRET_ACCESS_KEY="${var.aws_secret_access_key}"
     export AWS_SESSION_TOKEN="${var.aws_session_token}"
 
+    # Persist env vars for future sessions
+    echo "AWS_ACCESS_KEY_ID=${var.aws_access_key_id}" >> /etc/environment
+    echo "AWS_SECRET_ACCESS_KEY=${var.aws_secret_access_key}" >> /etc/environment
+    echo "AWS_SESSION_TOKEN=${var.aws_session_token}" >> /etc/environment
+
     apt-get update -y
     apt-get install -y \
       ca-certificates \
