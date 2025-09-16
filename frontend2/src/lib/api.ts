@@ -6,7 +6,7 @@ const instance = axios.create({
 });
 
 export const getBooks = async () => {
-  const { data } = await instance.get("/api/books/");
+  const { data } = await instance.get("/books/");
   return data as Array<{
     id: string;
     name: string;
@@ -19,7 +19,7 @@ export const getBooks = async () => {
 };
 
 export const getBookById = async (id: string) => {
-  const { data } = await instance.get(`/api/books/${id}`);
+  const { data } = await instance.get(`/books/${id}`);
   return data as {
     id: string;
     name: string;
