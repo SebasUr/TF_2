@@ -2,7 +2,7 @@
   {
     "id": "1",
     "name": "El Principito",
-    "image": "https://covers.openlibrary.org/b/id/12659863-L.jpg",
+    "image": "https://tunovela.es/wp-content/uploads/71mf0KoCQLL.jpg",
     "price": "$15.00",
     "author": "Antoine de Saint-Exupéry",
     "description": "Un clásico universal sobre la infancia, la imaginación y la amistad.",
@@ -11,7 +11,7 @@
   {
     "id": "2",
     "name": "Cien años de soledad",
-    "image": "https://covers.openlibrary.org/b/id/12913917-L.jpg",
+    "image": "https://nidodelibros.com/wp-content/uploads/2024/03/9786287641587-scaled.jpeg",
     "price": "$30.00",
     "author": "Gabriel García Márquez",
     "description": "La obra maestra del realismo mágico colombiano.",
@@ -20,7 +20,7 @@
   {
     "id": "3",
     "name": "Sapiens: De animales a dioses",
-    "image": "https://covers.openlibrary.org/b/id/12539074-L.jpg",
+    "image": "https://images.cdn2.buscalibre.com/fit-in/360x360/b5/1a/b51a9baa4e59e89a3578cb224e1f1d81.jpg",
     "price": "$28.00",
     "author": "Yuval Noah Harari",
     "description": "Un recorrido por la historia de la humanidad desde sus orígenes.",
@@ -29,7 +29,7 @@
   {
     "id": "4",
     "name": "1984",
-    "image": "https://covers.openlibrary.org/b/id/15356128-L.jpg",
+    "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1327144697i/3744438.jpg",
     "price": "$17.00",
     "author": "George Orwell",
     "description": "Distopía clásica sobre vigilancia y totalitarismo.",
@@ -38,7 +38,7 @@
   {
     "id": "5",
     "name": "Orgullo y prejuicio",
-    "image": "https://covers.openlibrary.org/b/id/11097400-L.jpg",
+    "image": "https://images.cdn2.buscalibre.com/fit-in/360x360/69/d4/69d4e28b6661d6b7ed6a53c1ba34eb33.jpg",
     "price": "$19.00",
     "author": "Jane Austen",
     "description": "Una de las novelas más queridas de la literatura inglesa.",
@@ -47,7 +47,7 @@
   {
     "id": "6",
     "name": "El arte de la guerra",
-    "image": "https://covers.openlibrary.org/b/id/10361925-L.jpg",
+    "image": "https://plazayjanescolombia.com/wp-content/uploads/2024/04/651567e4a5e54fcf4cd9db9b_cfj3lKhF0_odn5VS7p2qjJede9eempAc99UPEMfIwwo.jpeg",
     "price": "$21.00",
     "author": "Sun Tzu",
     "description": "Tratado clásico sobre estrategia y táctica militar.",
@@ -56,7 +56,7 @@
   {
     "id": "7",
     "name": "Don Quijote de la Mancha",
-    "image": "https://covers.openlibrary.org/b/id/12221664-L.jpg",
+    "image": "https://www.crisol.com.pe/media/catalog/product/cache/f6d2c62455a42b0d712f6c919e880845/9/7/9788466243711_cmxsq1fjdkbkrmap.jpg",
     "price": "$25.00",
     "author": "Miguel de Cervantes",
     "description": "Considerada la primera novela moderna y una de las mejores de la literatura universal.",
