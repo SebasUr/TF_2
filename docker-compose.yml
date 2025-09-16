@@ -8,7 +8,10 @@ services:
       NODE_ENV: production
       PORT: 5001
       AWS_REGION: ${AWS_REGION:-us-east-1}
-      # Add any other AWS env vars / credentials through docker run or compose overrides
+      AWS_DEFAULT_REGION: ${AWS_DEFAULT_REGION:-us-east-1}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_SESSION_TOKEN: ${AWS_SESSION_TOKEN}
     ports:
       - "5001:5001"
     # For real AWS creds you would mount env or use a secret manager; avoid hardcoding
