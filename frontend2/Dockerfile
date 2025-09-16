@@ -44,15 +44,6 @@ server {
     add_header Cache-Control "public, max-age=31536000, immutable";
     try_files $uri =404;
   }
-
-  # Pass through API (optional if frontend calls absolute API URL)
-  location /api/ {
-    proxy_pass http://backend:5001/; # service name in docker-compose
-    proxy_set_header Host $host;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-Forwarded-Proto $scheme;
-  }
 }
 EOF
 

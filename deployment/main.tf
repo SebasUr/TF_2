@@ -91,7 +91,7 @@ locals {
 
     # Pull/build and start only frontend2
     docker compose pull || true
-    docker compose build frontend2 || true
+    docker compose build --build-arg VITE_API_BASE_URL="${local.api_base_url}" frontend2 || true
     docker compose up -d frontend2
   EOT
 

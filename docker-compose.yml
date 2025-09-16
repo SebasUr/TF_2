@@ -22,7 +22,7 @@ services:
     environment:
       VITE_API_BASE_URL: ${VITE_API_BASE_URL:-/}
     ports:
-      - "3000:80"
+      - "80:80"
     # If using the internal nginx proxy to backend, ensure service name matches (backend)
 
 networks:
