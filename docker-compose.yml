@@ -1,0 +1,32 @@
+version: '3.9'
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: bookstore-backend
+    environment:
+      NODE_ENV: production
+      PORT: 5001
+      AWS_REGION: ${AWS_REGION:-us-east-1}
+      # Add any other AWS env vars / credentials through docker run or compose overrides
+    ports:
+      - "5001:5001"
+    # For real AWS creds you would mount env or use a secret manager; avoid hardcoding
+
+  frontend2:
+    build:
+      context: ./frontend2
+      args:
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-/}
+    container_name: bookstore-frontend
+    depends_on:
+      - backend
+    environment:
+      VITE_API_BASE_URL: ${VITE_API_BASE_URL:-/}
+    ports:
+      - "3000:80"
+    # If using the internal nginx proxy to backend, ensure service name matches (backend)
+
+networks:
+  default:
+    name: bookstore-net

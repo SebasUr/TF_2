@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "name": "El Principito",
+    "image": "https://covers.openlibrary.org/b/id/12659863-L.jpg",
+    "price": "$15.00",
+    "author": "Antoine de Saint-Exupéry",
+    "description": "Un clásico universal sobre la infancia, la imaginación y la amistad.",
+    "countInStock": 20
+  },
+  {
+    "id": "2",
+    "name": "Cien años de soledad",
+    "image": "https://covers.openlibrary.org/b/id/12913917-L.jpg",
+    "price": "$30.00",
+    "author": "Gabriel García Márquez",
+    "description": "La obra maestra del realismo mágico colombiano.",
+    "countInStock": 8
+  },
+  {
+    "id": "3",
+    "name": "Sapiens: De animales a dioses",
+    "image": "https://covers.openlibrary.org/b/id/12539074-L.jpg",
+    "price": "$28.00",
+    "author": "Yuval Noah Harari",
+    "description": "Un recorrido por la historia de la humanidad desde sus orígenes.",
+    "countInStock": 15
+  },
+  {
+    "id": "4",
+    "name": "1984",
+    "image": "https://covers.openlibrary.org/b/id/15356128-L.jpg",
+    "price": "$17.00",
+    "author": "George Orwell",
+    "description": "Distopía clásica sobre vigilancia y totalitarismo.",
+    "countInStock": 14
+  },
+  {
+    "id": "5",
+    "name": "Orgullo y prejuicio",
+    "image": "https://covers.openlibrary.org/b/id/11097400-L.jpg",
+    "price": "$19.00",
+    "author": "Jane Austen",
+    "description": "Una de las novelas más queridas de la literatura inglesa.",
+    "countInStock": 9
+  },
+  {
+    "id": "6",
+    "name": "El arte de la guerra",
+    "image": "https://covers.openlibrary.org/b/id/10361925-L.jpg",
+    "price": "$21.00",
+    "author": "Sun Tzu",
+    "description": "Tratado clásico sobre estrategia y táctica militar.",
+    "countInStock": 11
+  },
+  {
+    "id": "7",
+    "name": "Don Quijote de la Mancha",
+    "image": "https://covers.openlibrary.org/b/id/12221664-L.jpg",
+    "price": "$25.00",
+    "author": "Miguel de Cervantes",
+    "description": "Considerada la primera novela moderna y una de las mejores de la literatura universal.",
+    "countInStock": 10
+  },
+  {
+    "id": "8",
+    "name": "La Odisea",
+    "image": "https://covers.openlibrary.org/b/id/12003072-L.jpg",
+    "price": "$18.00",
+    "author": "Homero",
+    "description": "Poema épico que narra las aventuras de Odiseo en su regreso a Ítaca.",
+    "countInStock": 12
+  },
+  {
+    "id": "9",
+    "name": "Crónica de una muerte anunciada",
+    "image": "https://covers.openlibrary.org/b/id/12241538-L.jpg",
+    "price": "$16.00",
+    "author": "Gabriel García Márquez",
+    "description": "Novela breve basada en un hecho real ocurrido en Colombia.",
+    "countInStock": 7
+  },
+  {
+    "id": "10",
+    "name": "Meditaciones",
+    "image": "https://covers.openlibrary.org/b/id/12294862-L.jpg",
+    "price": "$22.00",
+    "author": "Marco Aurelio",
+    "description": "Clásico de la filosofía estoica con reflexiones personales del emperador romano.",
+    "countInStock": 12
+  }
+]
