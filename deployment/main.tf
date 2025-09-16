@@ -101,6 +101,9 @@ locals {
     export DEBIAN_FRONTEND=noninteractive
     export AWS_REGION="${var.region}"
     export AWS_DEFAULT_REGION="${var.region}"
+    export AWS_ACCESS_KEY_ID="${var.aws_access_key_id}"
+    export AWS_SECRET_ACCESS_KEY="${var.aws_secret_access_key}"
+    export AWS_SESSION_TOKEN="${var.aws_session_token}"
 
     apt-get update -y
     apt-get install -y \

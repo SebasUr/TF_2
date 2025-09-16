@@ -15,9 +15,6 @@ const TABLE_NAME = process.env.DDB_TABLE_NAME || "tb_books";
 
 function getClient() {
   const base = { region: process.env.AWS_REGION };
-  if (process.env.NODE_ENV === "production") {
-    return new DynamoDBClient(base);
-  }
   return new DynamoDBClient({ ...base, credentials: fromEnv() });
 }
 

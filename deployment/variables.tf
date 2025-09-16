@@ -3,8 +3,24 @@ variable "region" {
   default = "us-east-1"
 }
 
-# Removed explicit AWS creds variables. Use environment variables, shared profile (AWS_PROFILE),
-# or EC2 instance profile instead.
+# AWS Credentials for Backend (temporary, not committed)
+variable "aws_access_key_id" {
+  type        = string
+  description = "AWS Access Key ID (temporary)"
+  default     = ""
+}
+
+variable "aws_secret_access_key" {
+  type        = string
+  description = "AWS Secret Access Key (temporary)"
+  default     = ""
+}
+
+variable "aws_session_token" {
+  type        = string
+  description = "AWS Session Token (temporary)"
+  default     = ""
+}
 
 variable "key_name" {
   type    = string

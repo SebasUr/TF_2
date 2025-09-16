@@ -10,6 +10,7 @@ const getBooks = async (req, res) => {
   try {
     const client = new DynamoDBClient({
       region: process.env.AWS_REGION || process.env.AWS_DEFAULT_REGION,
+      credentials: fromEnv()
     });
 
     const docClient = DynamoDBDocumentClient.from(client);
@@ -59,6 +60,7 @@ const getBooksById = async (req, res) => {
   try {
     const client = new DynamoDBClient({
       region: process.env.AWS_REGION || process.env.AWS_DEFAULT_REGION,
+      credentials: fromEnv()
     });
 
     const docClient = DynamoDBDocumentClient.from(client);
