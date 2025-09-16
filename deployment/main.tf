@@ -47,14 +47,40 @@ locals {
     export AWS_DEFAULT_REGION="${var.region}"
     export VITE_API_BASE_URL="${local.api_base_url}"
 
-    # Install dependencies
     apt-get update -y
-    apt-get install -y ca-certificates curl gnupg lsb-release git
-    apt-get install -y docker.io docker-compose-plugin
+    apt-get install -y \
+      ca-certificates \
+      curl \
+      gnupg \
+      lsb-release \
+      software-properties-common
+
+    mkdir -p /etc/apt/keyrings
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \
+      gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+    chmod a+r /etc/apt/keyrings/docker.gpg
+
+    echo \
+      "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+      $(lsb_release -cs) stable" | \
+      tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+    apt-get update -y
+
+    apt-get install -y \
+      docker-ce \
+      docker-ce-cli \
+      containerd.io \
+      docker-buildx-plugin \
+      docker-compose-plugin
+
+    # Habilitar e iniciar docker
     systemctl enable --now docker
 
-    # Allow ubuntu user to use docker without sudo
-    if id ubuntu >/dev/null 2>&1; then usermod -aG docker ubuntu; fi
+    # Añadir usuario ubuntu al grupo docker si existe
+    if id ubuntu >/dev/null 2>&1; then
+      usermod -aG docker ubuntu
+    fi
 
     # Clone repo and run only frontend service
     mkdir -p /opt/app && cd /opt/app
@@ -77,11 +103,39 @@ locals {
     export AWS_DEFAULT_REGION="${var.region}"
 
     apt-get update -y
-    apt-get install -y ca-certificates curl gnupg lsb-release git
-    apt-get install -y docker.io docker-compose-plugin
+    apt-get install -y \
+      ca-certificates \
+      curl \
+      gnupg \
+      lsb-release \
+      software-properties-common
+
+    mkdir -p /etc/apt/keyrings
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \
+      gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+    chmod a+r /etc/apt/keyrings/docker.gpg
+
+    echo \
+      "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+      $(lsb_release -cs) stable" | \
+      tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+    apt-get update -y
+
+    apt-get install -y \
+      docker-ce \
+      docker-ce-cli \
+      containerd.io \
+      docker-buildx-plugin \
+      docker-compose-plugin
+
+    # Habilitar e iniciar docker
     systemctl enable --now docker
 
-    if id ubuntu >/dev/null 2>&1; then usermod -aG docker ubuntu; fi
+    # Añadir usuario ubuntu al grupo docker si existe
+    if id ubuntu >/dev/null 2>&1; then
+      usermod -aG docker ubuntu
+    fi
 
     mkdir -p /opt/app && cd /opt/app
     if [ ! -d repo ]; then
@@ -92,6 +146,7 @@ locals {
     docker compose pull || true
     docker compose build backend || true
     docker compose up -d backend
+    docker compose exec backend npm run seeder
   EOT
 }
 

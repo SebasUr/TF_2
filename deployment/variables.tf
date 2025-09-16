@@ -82,8 +82,8 @@ variable "table_name" {
 # Git repository URL to clone on instances (must contain docker-compose.yml)
 variable "repo_url" {
   type        = string
-  description = "Git repo URL (e.g. https://github.com/owner/repo.git)"
-  default     = "https://github.com/SebasUr/TF_MultiLayerDeployment.git"
+  description = "Git repo URL"
+  default     = "https://github.com/SebasUr/TF_2"
 }
 
 // Removed per-user overrides; always use local scripts
