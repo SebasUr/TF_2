@@ -1,7 +1,7 @@
 provider "aws" {
   region = var.region
-  # Credentials are resolved by the default chain:
-  # - EC2 instance profile / ECS task role
-  # - Environment (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SESSION_TOKEN)
-  # - Shared config/credentials files (AWS_PROFILE)
+
+  access_key = var.aws_access_key_id
+  secret_key = var.aws_secret_access_key
+  token      = var.aws_session_token
 }

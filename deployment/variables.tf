@@ -7,19 +7,19 @@ variable "region" {
 variable "aws_access_key_id" {
   type        = string
   description = "AWS Access Key ID (temporary)"
-  default     = ""
+  sensitive   = true
 }
 
 variable "aws_secret_access_key" {
   type        = string
   description = "AWS Secret Access Key (temporary)"
-  default     = ""
+  sensitive   = true
 }
 
 variable "aws_session_token" {
   type        = string
   description = "AWS Session Token (temporary)"
-  default     = ""
+  sensitive   = true
 }
 
 variable "key_name" {

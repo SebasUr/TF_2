@@ -149,7 +149,7 @@ locals {
     docker compose pull || true
     docker compose build backend || true
     docker compose up -d backend
-    docker compose exec backend npm run seeder
+    docker compose exec -e AWS_ACCESS_KEY_ID="${var.aws_access_key_id}" -e AWS_SECRET_ACCESS_KEY="${var.aws_secret_access_key}" -e AWS_SESSION_TOKEN="${var.aws_session_token}" backend npm run seeder
   EOT
 }
 
