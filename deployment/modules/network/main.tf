@@ -72,7 +72,6 @@ resource "aws_route_table" "private" {
 }
 
 resource "aws_route" "private_default" {
-  # Solo crear rutas por defecto en privadas cuando se hayan creado NATs
   for_each               = var.create_nat_gateways ? aws_route_table.private : {}
   route_table_id         = each.value.id
   destination_cidr_block = "0.0.0.0/0"

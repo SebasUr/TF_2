@@ -5,7 +5,6 @@ resource "aws_launch_template" "this" {
   vpc_security_group_ids = [var.sg_web_id]
   key_name               = var.key_name
 
-  # aws_launch_template.user_data expects base64-encoded content
   user_data = base64encode(var.user_data)
 
   tag_specifications {

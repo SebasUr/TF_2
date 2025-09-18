@@ -14,7 +14,6 @@ services:
       AWS_SESSION_TOKEN: ${AWS_SESSION_TOKEN}
     ports:
       - "5001:5001"
-    # For real AWS creds you would mount env or use a secret manager; avoid hardcoding
 
   frontend2:
     build:
@@ -26,7 +25,6 @@ services:
       VITE_API_BASE_URL: ${VITE_API_BASE_URL:-/}
     ports:
       - "80:80"
-    # If using the internal nginx proxy to backend, ensure service name matches (backend)
 
 networks:
   default:

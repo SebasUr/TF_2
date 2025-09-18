@@ -3,7 +3,6 @@ variable "region" {
   default = "us-east-1"
 }
 
-# AWS Credentials for Backend (temporary, not committed)
 variable "aws_access_key_id" {
   type        = string
   description = "AWS Access Key ID (temporary)"
@@ -95,21 +94,8 @@ variable "table_name" {
   default     = "tb_books"
 }
 
-# Git repository URL to clone on instances (must contain docker-compose.yml)
 variable "repo_url" {
   type        = string
   description = "Git repo URL"
   default     = "https://github.com/SebasUr/TF_2"
 }
-
-// Removed per-user overrides; always use local scripts
-# variable "backend_user_data" {
-#   type        = string
-#   description = "Cloud-init/User data script to bootstrap instances"
-#   default     = ""
-# }
-# variable "frontend_user_data" {
-#   type        = string
-#   description = "Cloud-init/User data script to bootstrap instances"
-#   default     = ""
-# }

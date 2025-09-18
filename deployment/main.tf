@@ -34,7 +34,6 @@ module "alb" {
   api_path                   = "/api/*"
 }
 
-# Build user_data scripts
 locals {
   alb_dns      = module.alb.alb_dns_name
   api_base_url = "http://${local.alb_dns}/api"
